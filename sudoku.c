@@ -59,7 +59,7 @@ int is_valid(Node* n){
                 if(arrayFila[n->sudo[f][c]]==1){
                     return 0;
                 }else{
-                    arrayFila[c]=1;
+                    arrayFila[n->sudo[f][c]]=1;
                 }
             }
 
@@ -67,12 +67,18 @@ int is_valid(Node* n){
                 if(arrayCol[n->sudo[c][f]]==1){
                     return 0;
                 }else{
-                    arrayCol[c]=1;
+                    arrayCol[n->sudo[c][f]]=1;
                 }
             }
               int i=3*(f/3) + (c/3) ;
               int j=3*(f%3) + (c%3) ;
-             
+             if(n->sudo[i][j]!=0){
+                 if(arraySub[n->sudo[i][j]]==1){
+                     return 0;
+                 }else{
+                     arraySub[n->sudo[i][j]]=1;
+                 }
+             }
         }  
         
     }
