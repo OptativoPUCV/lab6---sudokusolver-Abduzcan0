@@ -51,7 +51,7 @@ int is_valid(Node* n){
     
       int arrayFila[10]={0};
       int arrayCol[10]={0};
-      
+      int arraySub[10]={0};
 
          for(int c=0;c<9;c++){
              
@@ -70,6 +70,9 @@ int is_valid(Node* n){
                     arrayCol[c]=1;
                 }
             }
+              int i=3*(f/3) + (c/3) ;
+              int j=3*(f%3) + (c%3) ;
+             
         }  
         
     }
