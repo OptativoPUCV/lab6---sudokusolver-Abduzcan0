@@ -56,7 +56,7 @@ int is_valid(Node* n){
          for(int c=0;c<9;c++){
              
             if(n->sudo[f][c]!=0){
-                if(arrayFila[c]==1){
+                if(arrayFila[n->sudo[f][c]]==1){
                     return 0;
                 }else{
                     arrayFila[c]=1;
@@ -64,14 +64,22 @@ int is_valid(Node* n){
             }
 
              if(n->sudo[c][f]!=0){
-                if(arrayCol[c]==1){
+                if(arrayCol[n->sudo[c][f]]==1){
                     return 0;
                 }else{
                     arrayCol[c]=1;
                 }
             }
         }  
+        int k=4,p; 
+    for(p=0;p<9;p++){
+        int i=3*(k/3) + (p/3) ;
+        int j=3*(k%3) + (p%3) ;
+        printf("%d ",n->sudo[i][j]);
+        if(p%3 == 2) printf("\n");
     }
+    }
+    
     
     return 1;
 }
