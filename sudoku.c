@@ -44,15 +44,35 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
+
     
-    int k=4,p; 
     
-    for(p=0;p<9;p++){
-        int i=3*(k/3) + (p/3) ;
-        int j=3*(k%3) + (p%3) ;
-        printf("%d ",n->sudo[i][j]);
-        if(p%3 == 2) printf("\n");
+    for(int f=0;f<9;f++){
+    
+      int arrayFila[10];
+      int arrayCol[10];
+      int arraySub[10];
+
+         for(int c=0;c<9;c++){
+             
+            if(n->sudo[f][c]!=0){
+                if(arrayFila[c]==1){
+                    return 0;
+                }else{
+                    arrayFila[c]=1;
+                }
+            }
+
+             if(n->sudo[c][f]!=0){
+                if(arrayFila[c]==1){
+                    return 0;
+                }else{
+                    arrayFila[c]=1;
+                }
+            }
+        }  
     }
+    
     return 1;
 }
 
