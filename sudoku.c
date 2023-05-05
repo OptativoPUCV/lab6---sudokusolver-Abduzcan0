@@ -64,10 +64,10 @@ int is_valid(Node* n){
             }
 
              if(n->sudo[c][f]!=0){
-                if(arrayFila[c]==1){
+                if(arrayCol[c]==1){
                     return 0;
                 }else{
-                    arrayFila[c]=1;
+                    arrayCol[c]=1;
                 }
             }
         }  
