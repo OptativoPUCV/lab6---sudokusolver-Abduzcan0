@@ -51,7 +51,7 @@ int is_valid(Node* n){
     
       int arrayFila[10];
       int arrayCol[10];
-      int arraySub[10];
+      
 
          for(int c=0;c<9;c++){
              
