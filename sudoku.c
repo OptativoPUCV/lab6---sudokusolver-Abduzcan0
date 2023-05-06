@@ -45,8 +45,6 @@ void print_node(Node* n){
 
 int is_valid(Node* n){
 
-    
-    
     for(int f=0;f<9;f++){
     
       int arrayFila[10]={0};
@@ -102,7 +100,8 @@ List* get_adj_nodes(Node* n){
 
                     Node *nodoNuevo=copy(n);
                     nodoNuevo->sudo[f][c]=j;
-                    pushBack(list,nodoNuevo);
+
+                    if(is_valid(n)==1)pushBack(list,nodoNuevo);
 
                 }
             }
