@@ -143,7 +143,7 @@ Node* DFS(Node* initial, int* cont){
 
         Node *n=first(nodosAux);
         
-        while(nodosAux!=NULL){
+        while(n!=NULL){
             push(s,n);
             n=next(nodosAux);
         }
